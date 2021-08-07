@@ -1,4 +1,4 @@
-version: 1
+version: 2
 
 sources:
   - name: postgres
@@ -6,5 +6,5 @@ sources:
     schema: public
     tables:
       - name: orders
-      -name: order_details
+      - name: order_details
       - name: customers
