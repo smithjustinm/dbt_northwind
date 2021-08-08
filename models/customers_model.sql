@@ -1,26 +1,17 @@
 
-with customers_model as (
+with customers as (
 
-    select 
-        "CustomerID",
-        "CompanyName",
-        "City",
-        "Country"
-
-    from customers
-
+    select * 
+    
+    from {{ ref('stg_customers')}}
+    
 ),
 
 orders as (
 
-    select
-        "OrderID",
-        "CustomerID",
-        "OrderDate",
-        "ShipVia",
-        "Freight"
+    select *
 
-    from orders
+    from {{ ref('stg_orders')}}
 
 ),
 
