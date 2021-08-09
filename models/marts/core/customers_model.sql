@@ -1,3 +1,8 @@
+{{ 
+    config(
+        materialized="table"
+        
+)}}
 
 with customers_model as (
 

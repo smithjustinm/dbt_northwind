@@ -1,9 +1,12 @@
-select
-    "CustomerID",
-    "CompanyName",
-    "Country"
+with customers as (
+    select
+        "CustomerID",
+        "CompanyName",
+        "Country"
+    from public.customers
+)
 
-from public.customers
+select * from customers
 
 
 
