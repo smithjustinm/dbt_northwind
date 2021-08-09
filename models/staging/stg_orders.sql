@@ -1,8 +1,6 @@
 select
-    "OrderID",
-    "CustomerID",
-    "OrderDate",
-    "ShipVia" as "ShipperID",
-    "Freight"
+	"OrderID",
+	"CustomerID",
+	"OrderDate"
+from public.orders
 
-from orders

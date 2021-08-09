@@ -3,6 +3,8 @@ select
     "CompanyName",
     "Country"
 
-from customers
+from public.customers
+
+
 
 

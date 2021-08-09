@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: public
+    description: postgres db with the northwind data.
+    tables:
+      - name: orders
+        columns:
+          - name: OrderID
+            description: Primary key of the table
+          - name: CustomerID
+          - name: OrderDate
+            
+
+      - name: customers
+        columns:
+          - name: CustomerID
+            description: Primary key of the table
+          - name: CompanyName
+          - name: County
+            
+
+models:
+  - name: stg_customers
+    columns:
+      - name: CustomerID
+        
+
+  - name: stg_orders
+    columns:
+      - name: OrderID
+        

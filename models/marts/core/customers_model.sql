@@ -1,5 +1,5 @@
 
-with customers as (
+with customers_model as (
 
     select * 
     
@@ -35,10 +35,7 @@ final as (
     select
         customers_model."CustomerID",
         customers_model."CompanyName",
-        customers_model."City",
         customers_model."Country",
-        orders."ShipVia",
-        orders."Freight",
         customer_orders."first_order_date",
         customer_orders."most_recent_order_date",
         coalesce(customer_orders."number_of_orders", 0) as number_of_orders
