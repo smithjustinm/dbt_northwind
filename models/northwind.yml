@@ -8,7 +8,13 @@ sources:
         columns:
           - name: OrderID
             description: Primary key of the table
+            tests:
+              - unique
+              - not_null
           - name: CustomerID
+            tests:
+              - unique
+              - not_null
           - name: OrderDate
             
 
@@ -16,8 +22,16 @@ sources:
         columns:
           - name: CustomerID
             description: Primary key of the table
+            tests:
+              - unique
+              - not_null
           - name: CompanyName
+            tests:
+              - unique
+              - not_null
           - name: County
+            tests:
+              - not_null
             
 
 models:

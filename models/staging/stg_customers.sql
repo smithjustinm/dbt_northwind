@@ -5,7 +5,6 @@ with customers as (
         "Country"
     from public.customers
 )
-
 select * from customers
 
 
