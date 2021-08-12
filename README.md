@@ -16,6 +16,8 @@ Luckily, the dbt connection is nothing more than passing credentials.
 
 In the base directory there is a dbt_project.yml files. The yml file specifies project details and can be configured for different materilizations at the folder level (quite useful). 
 
+<img src=https://raw.githubusercontent.com/smithjustinm/dbt_northwind/main/Screen%20Shot%202021-08-11%20at%2011.24.15%20PM.png width="200" height="auto"/>
+
 ## Models
 
 Dbt refers to any .sql files using "SELECT" statement as "models." These models are one of the main contributions dbt makes to the data warehouse. When "dbt run" is passed as a command, dbt executes the compiled SQL models against the target database. Dbt connects to the database and materialized the SQL. While there are various materializations, the table materialization populates a new table in the target database. 
@@ -23,6 +25,8 @@ Dbt refers to any .sql files using "SELECT" statement as "models." These models 
 ### Staging & Jinja 
 
 The real benefit of dbt is the use of Jinja and the ability to write SQL files that can act as variables. Staging SQL scripts to reference in other SQL scripts gives writing SQL a big upgrade. The "{{ }}" used in Jinja allow various templating and as mentioned referencing other models is a great way to get started. The syntax is {{ ref('staged_model_name')}}. 
+
+<img src=https://raw.githubusercontent.com/smithjustinm/dbt_northwind/main/Screen%20Shot%202021-08-11%20at%2011.24.41%20PM.png width="400" height="auto"/>
 
 One big question that seems to come up concerns readability. Won't something like this make SQL less readable since you are not looking at what goes into that refernced model? Good news, you can click "Compile SQL" in dbt cloud or "dbt compile" in the CLI. 
 
